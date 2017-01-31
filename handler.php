@@ -19,4 +19,9 @@ class Transaction
         $this->context  =   $context;
         $this->method   =   $method;
     }
+
+    public function response( )
+    {
+        return json_encode([ "api_key" => $this->api_key, "api_secret" => $this->secret ]);
+    }
 }
